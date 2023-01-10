@@ -1,8 +1,8 @@
 import json
-
+import requests
 from url_requests import get_request_site_soup
 
-url = 'https://rabota.ua/ua/zapros/python/'
+url = 'https://www.work.ua/jobs-python/'
 
 
 headers = {
@@ -10,6 +10,6 @@ headers = {
 }
 
 
-soup = get_request_site_soup(url, headers='')
+r = requests.get(url, headers=headers)
 
-print(soup)
+print(r.text)

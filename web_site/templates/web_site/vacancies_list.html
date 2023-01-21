@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Vacancies list
+{% endblock %}
+
+{% block content %}
+    <h1>Vacancies list</h1>
+    <ul>
+        {% for vacancy in vacancies %}
+            <li>
+                {{ vacancy.title }} <br>
+                {{ vacancy.city }} <br>
+                <a href="{{ vacancy.url }}" target="_blank">{{ vacancy.url }}</a> <br>
+                {{ vacancy.date }} <br>
+                <br><br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

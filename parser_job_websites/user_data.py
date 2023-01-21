@@ -1,4 +1,0 @@
-
-
-keyword = 'python'
-city = 'Kharkiv'

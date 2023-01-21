@@ -1,19 +1,23 @@
-from parser_websites_jobs.url_requests import get_request_site_soup
-
-url = 'https://djinni.co/jobs/?primary_keyword=Python&employment=remote'
-
-headers = {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-}
+from parser_job_websites.bs4_requests import get_request_site_soup
 
 
-soup = get_request_site_soup(url, headers=headers)
+def djinni_parser(url='https://djinni.co/jobs/?primary_keyword=Python&employment=remote'):
+    soup = get_request_site_soup(url)
+    all_vacancies = soup.find('div', {'class': 'row'}).findAll('li', {'class': 'list-jobs__item'})
+    dict_data = []
+    for item in all_vacancies:
+        title = item.find('a', {'class': 'profile'}).text.strip()
+        url = 'https://djinni.co' + item.find('a', {'class': 'profile'}).get('href')
+        city = item.find('span', {'class': 'location-text'}).text.strip()
+        date = item.find('div', {'class': 'text-date'}).text.strip().split()[0]
+        dict_data.append(
+            {
+                'title': title,
+                'url': url,
+                'city': city,
+                'date': date,
+            }
+        )
+    print(dict_data)
 
-all_vacancies = soup.find('div', {'class': 'row'}).findAll('li', {'class': 'list-jobs__item'})
-
-for item in all_vacancies:
-    title = item.find('a', {'class': 'profile'}).text.strip()
-    url = 'https://djinni.co' + item.find('a', {'class': 'profile'}).get('href')
-    city = item.find('span', {'class': 'location-text'}).text.strip()
-    date = item.find('div', {'class': 'text-date'}).text.strip().split()
-    print(date)
+djinni_parser()

@@ -1,21 +1,24 @@
-import json
-
-from parser_websites_jobs.url_requests import get_request_site_soup
+from parser_job_websites.bs4_requests import get_request_site_soup, validation_data
 
 
-url = 'https://jobs.dou.ua/vacancies/?remote&search=python%20'
-headers = {
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-}
+def dou_ua_parser(url='https://jobs.dou.ua/vacancies/?remote&search=python%20'):
+    soup = get_request_site_soup(url)
+    all_title = soup.findAll('li', class_='l-vacancy')
+    result = None
+    for item in all_title:
+        title = item.find('a', class_='vt').text.strip()
+        url = item.find('a', class_='vt').get('href')
+        city = item.find('span', {'class': 'cities'}).text.strip()
+        date = item.find('div', class_='date')
+        if date is None:
+            date = 'None'
+        else:
+            date = date.text.strip()
+        result = validation_data(title, url, city, date)
 
-data_dict = []
+    return result
 
-soup = get_request_site_soup(url, headers=headers)
+print(dou_ua_parser())
+l = dou_ua_parser()
+print(len(l))
 
-all_title = soup.findAll('li', class_='l-vacancy')
-
-for item in all_title:
-    title = item.find('a', class_='vt').text.strip()
-    url = item.find('a', class_='vt').get('href')
-    city = item.find('span', {'class': 'cities'})
-    date = item.find('div', class_='date')

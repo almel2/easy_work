@@ -9,6 +9,8 @@
     <ul>
         {% for vacancy in vacancies %}
             <li>
+                {{ vacancy.user.id }} id,   User email - {{ vacancy.user.email }} |  create date - {{ vacancy.create_date }} <br><br>
+                Site - {{ vacancy.site }} <br>
                 {{ vacancy.title }} <br>
                 {{ vacancy.city }} <br>
                 <a href="{{ vacancy.url }}" target="_blank">{{ vacancy.url }}</a> <br>

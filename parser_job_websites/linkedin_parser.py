@@ -1,11 +1,13 @@
-from parser_job_websites.bs4_requests import get_request_site_soup
+from parser_job_websites.bs4_requests import get_request_site_soup, validation_title_on_keywords
 
 
-def linkedin_parser(
-        url='https://www.linkedin.com/jobs/search/?keywords=Python&location=Ukraine&locationId=&geoId=102264497&f_TPR=r86400&f_WT=2&position=1&pageNum=0'):
+
+def linkedin_parser(*args):
+    url = 'https://www.linkedin.com/jobs/search?keywords=Python&location=Ukraine&locationId=&geoId=102264497&f_TPR=r86400&position=1&pageNum=0'
     soup = get_request_site_soup(url)
     all_vacancies = soup.find('section', {'class': 'two-pane-serp-page__results-list'}).findAll('li')
     dict_data = []
+    keywords = args
     for item in all_vacancies:
         title = item.find('a', {'class': 'base-card__full-link'})
         if title is not None:
@@ -27,5 +29,7 @@ def linkedin_parser(
             )
     return dict_data
 
-print(linkedin_parser())
+
+print(linkedin_parser('python', 'backend'))
 print(len(linkedin_parser()))
+

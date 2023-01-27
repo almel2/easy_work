@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}
-    
+
     {% endblock %}</title>
 </head>
 <body>
+<div class="navi">
+    <div class="registration ">
+        {% if user.is_authenticated %}
+            {{ user.username }} email {{ user.email }} /
+            <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'register' %}">Register</a> /
+            <a href="{% url 'login' %}">Login</a> /
+        {% endif %}
+    </div>
+    <div class="navi-bar">
+        <a href="{% url 'vacancies_list' %}">Home</a> |
+        <a href="{% url 'admin:index' %}">Admin</a> |
+        <a href="{% url 'user_keyword' %}">KeyWord </a> |
+        <a href="{% url 'user_keyword_celery' %}">Keyword celery</a>
+
+    </div>
+</div>
 {% block content %}
 
 {% endblock %}

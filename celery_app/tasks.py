@@ -22,12 +22,12 @@ def add_new_data_in_bd(user_id):
     with open(os.path.join(base_dir, 'vacancy_dict.json')) as file:
         data = file.read()
 
-    site, create = SiteModel.objects.get_or_create(site='My site Easy Work')
-    city, create = CityModel.objects.get_or_create(city='Kharkiv')
-
-    VacancyModel.objects.update_or_create(
+    site, created = SiteModel.objects.get_or_create(site='Easy Work')
+    city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
+    print(site)
+    VacancyModel.objects.create(
         user=User.objects.get(pk=user_id),
-        title='New test vacancy',
+        title='На данный момент новых вакансий нет',
         url='#',
         city=city,
         date='Here should be date',
@@ -46,6 +46,8 @@ def add_new_data_in_bd(user_id):
             city=city,
             date=item['date'],
             site=site,
+
+            defaults={'date': item['date']}
         )
 
 

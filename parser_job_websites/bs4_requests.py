@@ -43,7 +43,8 @@ def validation_title_on_keywords(title):
 def validation_data(title, url, city, date, site, keyword='python', user_city=('kharkiv', 'Remote'), dict_data=[]):
     words_ignore = ('middle', 'mid', 'senior', 'data', 'vision',
                     'machine', 'full', 'mentor', 'commod', 'fullstack',
-                    'cybersecurity', 'applied', 'solutions', 'lead')
+                    'cybersecurity', 'applied', 'solutions', 'lead',
+                    'Викладач', 'Вчитель')
 
     if title is None:
         title = 'None'
@@ -56,7 +57,7 @@ def validation_data(title, url, city, date, site, keyword='python', user_city=('
 
     flag = True
     for item in words_ignore:   # This valid ignore vacancies from words_ignore
-        if item in title.lower():
+        if item.lower() in title.lower():
             flag = False
 
 

@@ -1,5 +1,6 @@
 import json
 
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, HttpResponse
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -22,7 +23,7 @@ class VacanciesList(ListView):
     ordering = ('-create_date')
 
 
-class UserParserKeyword(FormView):
+class UserParserKeyword(LoginRequiredMixin, FormView):
     form_class = UserKeywordForm
     template_name = 'web_site/user_keyword.html'
     success_url = reverse_lazy('vacancies_list')
@@ -31,22 +32,11 @@ class UserParserKeyword(FormView):
         keyword = form.data['keyword']
         user_id = self.request.user.id
         user_parser_for_keyword(keyword, user_id)
-        # schedule, created = IntervalSchedule.objects.get_or_create(
-        #     every=10,
-        #     period=IntervalSchedule.MINUTES
-        # )
-        # PeriodicTask.objects.get_or_create(
-        #     interval=schedule,
-        #     name='user_parser_for_keyword',
-        #     task='celery_app.tasks.user_parser_for_keyword',
-        #     args=json.dumps([keyword]),
-        #     start_time = timezone.now(),
-        # )
 
         return super(UserParserKeyword, self).form_valid(form)
 
 
-class UserParserKeywordCelery(FormView):
+class UserParserKeywordCelery(LoginRequiredMixin, FormView):
     form_class = UserKeywordForm
     template_name = 'web_site/user_keyword_celery.html'
     success_url = reverse_lazy('vacancies_list')

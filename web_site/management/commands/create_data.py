@@ -9,11 +9,6 @@ from web_site.models import VacancyModel, CityModel,  SiteModel
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
-
-# parser = AllParserForUser()
-#
-# parser.dou_ua_parser()
-
 User = get_user_model()
 
 
@@ -21,27 +16,40 @@ class Command(BaseCommand):
     help = 'This command create data'
 
     def handle(self, *args, **options):
-        try:
-            with open(os.path.join(BASE, 'vacancy_dict.json')) as file:
-                data = file.read()
-        except FileNotFoundError:
-            self.stdout.write(self.style.ERROR(f'No such file or directory'))
+        site, create = SiteModel.objects.update_or_create(site='Site foo')
+        city, create = CityModel.objects.update_or_create(city='City foo')
 
-
-
-        counter = 0
-        for item in json.loads(data):
-            counter += 1
-            site, create = SiteModel.objects.get_or_create(site=item['site'])
-            city, create = CityModel.objects.get_or_create(city=item['city'])
-
-            VacancyModel.objects.update_or_create(
+        VacancyModel.objects.update_or_create(
                 user=User.objects.get(pk=1),
-                title=item['title'],
-                url=item['url'],
+                title='title1',
+                url='url1',
                 city=city,
-                date=item['date'],
+                date='Date 2',
                 site=site,
+                defaults={'date': 'Date 3'}
             )
-            self.stdout.write(self.style.SUCCESS(f'Created data {counter}'))
+
+        # try:
+        #     with open(os.path.join(BASE, 'vacancy_dict.json')) as file:
+        #         data = file.read()
+        # except FileNotFoundError:
+        #     self.stdout.write(self.style.ERROR(f'No such file or directory'))
+        #
+        #
+        #
+        # counter = 0
+        # for item in json.loads(data):
+        #     counter += 1
+        #     site, create = SiteModel.objects.get_or_create(site=item['site'])
+        #     city, create = CityModel.objects.get_or_create(city=item['city'])
+        #
+        #     VacancyModel.objects.update_or_create(
+        #         user=User.objects.get(pk=1),
+        #         title=item['title'],
+        #         url=item['url'],
+        #         city=city,
+        #         date=item['date'],
+        #         site=site,
+        #     )
+        #     self.stdout.write(self.style.SUCCESS(f'Created data {counter}'))
         self.stdout.write(self.style.SUCCESS('Success create date!'))

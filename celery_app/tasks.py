@@ -13,6 +13,7 @@ base_dir = os.path.dirname(__file__)
 
 User = get_user_model()
 
+
 @shared_task(name='test_work_beat')
 def test_work_beat():
     print('Success Beat is work!!!!!!!!!!!!!!!!!!')
@@ -22,22 +23,33 @@ def add_new_data_in_bd(user_id):
     with open(os.path.join(base_dir, 'vacancy_dict.json')) as file:
         data = file.read()
 
-    site, created = SiteModel.objects.get_or_create(site='Easy Work')
-    city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
-    print(site)
-    VacancyModel.objects.create(
-        user=User.objects.get(pk=user_id),
-        title='На данный момент новых вакансий нет',
-        url='#',
-        city=city,
-        date='Here should be date',
-        site=site,
-    )
-
+    # site, created = SiteModel.objects.get_or_create(site='Easy Work')
+    # city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
+    # print(site)
+    # VacancyModel.objects.create(
+    #     user=User.objects.get(pk=user_id),
+    #     title='На данный момент новых вакансий нет',
+    #     url='#',
+    #     city=city,
+    #     date='Here should be date',
+    #     site=site,
+    # )
 
     for item in json.loads(data):
         site, create = SiteModel.objects.get_or_create(site=item['site'])
         city, create = CityModel.objects.get_or_create(city=item['city'])
+        if site is 'Linkedin':
+            VacancyModel.objects.update_or_create(
+                user=User.objects.get(pk=user_id),
+                title=item['title'],
+                url=item['url'],
+                city=city,
+                date=item['date'],
+                site=site,
+
+                defaults={'date': item['date'],
+                          'url': item['url']}
+            )
 
         VacancyModel.objects.update_or_create(
             user=User.objects.get(pk=user_id),
@@ -49,7 +61,6 @@ def add_new_data_in_bd(user_id):
 
             defaults={'date': item['date']}
         )
-
 
 
 @shared_task

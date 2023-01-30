@@ -38,17 +38,16 @@ def add_new_data_in_bd(user_id):
     for item in json.loads(data):
         site, create = SiteModel.objects.get_or_create(site=item['site'])
         city, create = CityModel.objects.get_or_create(city=item['city'])
-        if site is 'Linkedin':
+
+        if site.site == 'Linkedin':
+            print('work')
             VacancyModel.objects.update_or_create(
                 user=User.objects.get(pk=user_id),
                 title=item['title'],
-                url=item['url'],
                 city=city,
-                date=item['date'],
                 site=site,
 
-                defaults={'date': item['date'],
-                          'url': item['url']}
+                defaults={'url': item['url'], 'date': item['date']}
             )
 
         VacancyModel.objects.update_or_create(
@@ -56,7 +55,6 @@ def add_new_data_in_bd(user_id):
             title=item['title'],
             url=item['url'],
             city=city,
-            date=item['date'],
             site=site,
 
             defaults={'date': item['date']}

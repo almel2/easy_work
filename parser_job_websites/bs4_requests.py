@@ -32,19 +32,19 @@ def write_in_file(data_dict):
 
 def validation_title_on_keywords(title):
     keywords = ('python', 'back', 'front', 'django', 'react', 'script')
-    flag = False
+
     for item in keywords:
         if item.lower() in title.lower():
-            flag = True
+            return True
 
-    return flag
+    return False
 
 
 def validation_data(title, url, city, date, site, keyword='python', user_city=('kharkiv', 'Remote'), dict_data=[]):
     words_ignore = ('middle', 'mid', 'senior', 'data', 'vision',
                     'machine', 'full', 'mentor', 'commod', 'fullstack',
                     'cybersecurity', 'applied', 'solutions', 'lead',
-                    'Викладач', 'Вчитель')
+                    'Викладач', 'Вчитель', 'QA')
 
     if title is None:
         title = 'None'

@@ -20,7 +20,7 @@ class VacanciesList(ListView):
     model = VacancyModel
     context_object_name = 'vacancies'
     template_name = 'web_site/vacancies_list.html'
-    ordering = ('-create_date')
+    ordering = ('-create_date', )
 
 
 class UserParserKeyword(LoginRequiredMixin, FormView):

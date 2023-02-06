@@ -1,29 +1,11 @@
 # объявление функции
-def is_password_good(password):
-    counter = 0
-    if len(password) < 8:
-        return False
-    for i in password:
-        if i.islower():
-            counter += 1
-            break
-    for i in password:
-        if i.isupper():
-            counter += 1
-            print(i)
-            break
-    for i in password:
-        if i.isdigit():
-            counter += 1
-            break
-    if counter == 3:
-        return True
-    return False
-
-
+def solve(a, b, c):
+    d = b ** 2 - 4 * a * c
+    return sorted(((-b - d ** 0.5) / (2 * a), (-b + d ** 0.5) / (2 * a)), key=int)
 # считываем данные
-txt = 'dsas233232232'
 
-# вызываем функцию
-print(is_password_good(txt))
 
+# вызываем
+x1, x2 = solve(-2, 7, -5)
+
+print(x1, x2)

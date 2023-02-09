@@ -1,11 +1,16 @@
-# объявление функции
-def solve(a, b, c):
-    d = b ** 2 - 4 * a * c
-    return sorted(((-b - d ** 0.5) / (2 * a), (-b + d ** 0.5) / (2 * a)), key=int)
-# считываем данные
+l = ['8', '11', '-5', '4', '3']
 
 
-# вызываем
-x1, x2 = solve(-2, 7, -5)
+def get_rec_sum(l):
+    print('i')
+    if len(l) == 1:
+        return +int(l[0])
+    return int(l[0]) + get_rec_sum(l[1:])
 
-print(x1, x2)
+
+num = get_rec_sum(l)
+print(num)
+a = 5
+b = 10
+
+a, b = b, a

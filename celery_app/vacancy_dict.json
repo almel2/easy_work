@@ -2091,5 +2091,698 @@
         "url": "https://rabota.ua/ua/company928659/vacancy9386339",
         "city": "Київ",
         "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/435984-python-developer/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-python-developer-warszawa",
+        "city": "remote",
+        "date": "2023-02-08T12:00:22.802Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Backend (Python/Django) Engineer",
+        "url": "https://justjoin.it/offers/hexocean-sp-z-o-o-junior-backend-python-django-engineer",
+        "city": "remote",
+        "date": "2023-02-06T13:56:00.000Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Developer PYTHON",
+        "url": "https://justjoin.it/offers/idcom-group-sp-z-o-o-junior-developer-python",
+        "city": "remote",
+        "date": "2023-02-03T14:26:12.417Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-krakow",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer-lodz",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "JastJoin_pl",
+        "title": "Junior Python Developer",
+        "url": "https://justjoin.it/offers/endysoft-junior-python-developer",
+        "city": "remote",
+        "date": "2023-02-05T15:00:11.448Z"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Python developer",
+        "url": "https://jobs.dou.ua/companies/nestlogic/vacancies/215175/",
+        "city": "Київ, Вінниця, віддалено",
+        "date": "8 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Analyst (Python)",
+        "url": "https://jobs.dou.ua/companies/privatbank/vacancies/228724/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Dou.ua",
+        "title": "Software Engineer (Python)",
+        "url": "https://jobs.dou.ua/companies/sps-ukraine/vacancies/228695/",
+        "city": "Київ, віддалено",
+        "date": "7 лютого 2023"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python Developer",
+        "url": "https://djinni.co/jobs/158518-python-developer/",
+        "city": "Україна",
+        "date": "сьогодні"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Python developer",
+        "url": "https://djinni.co/jobs/96861-python-developer/",
+        "city": "Узбекистан,\n    Азербайджан,\n    Киргизстан",
+        "date": "вчора"
+    },
+    {
+        "site": "Djinni.co",
+        "title": "Integration Developer (Python)",
+        "url": "https://djinni.co/jobs/522919-integration-developer-python-/",
+        "city": "Україна",
+        "date": "вчора"
+    },
+    {
+        "site": "Work.ua",
+        "title": "Python developer",
+        "url": "https://www.work.ua/jobs/4034585/",
+        "city": "",
+        "date": " 8 лютого 2023"
+    },
+    {
+        "site": "Robota.ua",
+        "title": "Python Developer",
+        "url": "https://rabota.ua/ua/company928659/vacancy9386339",
+        "city": "Київ",
+        "date": "1 день тому"
     }
 ]

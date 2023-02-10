@@ -9,13 +9,12 @@
     <ul>
         {% for vacancy in vacancies %}
             <li>
-                {{ vacancy.user.id }} id,   User email - {{ vacancy.user.email }} |  create date - {{ vacancy.create_date }} <br><br>
+                <h2>{{ vacancy.title }}</h2>
                 Site - {{ vacancy.site }} <br>
-                {{ vacancy.title }} <br>
-                {{ vacancy.city }} <br>
-                <a href="{{ vacancy.url }}" target="_blank">{{ vacancy.url }}</a> <br>
-                {{ vacancy.date }} <br>
-                <br><br>
+                City - {{ vacancy.city }} <br>
+                Url - <a href="{{ vacancy.url }}" target="_blank">{{ vacancy.url }}</a><br>
+                Date - {{ vacancy.date }} <br><br>
+                User id - {{ vacancy.user.id }},   User email - {{ vacancy.user.email }} |  create date - {{ vacancy.create_date }} <br><br>
             </li>
         {% endfor %}
     </ul>

@@ -1,5 +1,6 @@
 import json
 import os
+import random
 
 from django.contrib.auth import get_user_model
 
@@ -23,17 +24,17 @@ def add_new_data_in_bd(user_id):
     with open(os.path.join(base_dir, 'vacancy_dict.json')) as file:
         data = file.read()
 
-    # site, created = SiteModel.objects.get_or_create(site='Easy Work')
-    # city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
-    # print(site)
-    # VacancyModel.objects.create(
-    #     user=User.objects.get(pk=user_id),
-    #     title='На данный момент новых вакансий нет',
-    #     url='#',
-    #     city=city,
-    #     date='Here should be date',
-    #     site=site,
-    # )
+    site, created = SiteModel.objects.get_or_create(site='Easy Work')
+    city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
+    print(site)
+    VacancyModel.objects.create(
+        user=User.objects.get(pk=user_id),
+        title='Title number - ' + str(random.randint(1, 100)),
+        url='#',
+        city=city,
+        date='Here should be date',
+        site=site,
+    )
 
     for item in json.loads(data):
         site, create = SiteModel.objects.get_or_create(site=item['site'])
@@ -65,11 +66,11 @@ def add_new_data_in_bd(user_id):
 def user_parser_for_keyword(keyword, user_id):
     parser = AllParserForUser(keyword)
 
-    parser.jastjoin_pl_parser()
-    parser.dou_ua_parser()
-    parser.djinni_parser()
-    parser.work_ua_parser()
-    parser.robota_ua_parser()
-    parser.linkedin_parser()
+    # parser.jastjoin_pl_parser()
+    # parser.dou_ua_parser()
+    # parser.djinni_parser()
+    # parser.work_ua_parser()
+    # parser.robota_ua_parser()
+    # parser.linkedin_parser()
 
     add_new_data_in_bd(user_id)

@@ -130,4 +130,4 @@ dmypy.json
 .idea/
 
 celery_app/vacancy_dict.json
-accounts/don't forgot delete.py
+.do_not_forgot_delete.py

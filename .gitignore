@@ -130,4 +130,6 @@ dmypy.json
 .idea/
 
 celery_app/vacancy_dict.json
-.do_not_forgot_delete.py
+do_not_forgot_delete.py
+
+# git rm --cached FILENAME -- delete detected file

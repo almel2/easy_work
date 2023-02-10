@@ -129,5 +129,5 @@ dmypy.json
 
 .idea/
 
-.celery_app/vacancy_dict.json
-.accounts/don't forgot delete.py
+celery_app/vacancy_dict.json
+accounts/don't forgot delete.py

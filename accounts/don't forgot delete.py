@@ -1,16 +1,11 @@
-l = ['8', '11', '-5', '4', '3']
+N = 7
 
 
-def get_rec_sum(l):
-    print('i')
-    if len(l) == 1:
-        return +int(l[0])
-    return int(l[0]) + get_rec_sum(l[1:])
+# здесь задается функция fib_rec (переменную N не менять!)
+def fib_rec(N, f=[1, 1]):
+    if N == 2:
+        return f
+    return fib_rec(N - 1, f.append(f[-2] + f[-1]))
 
 
-num = get_rec_sum(l)
-print(num)
-a = 5
-b = 10
-
-a, b = b, a
+print(fib_rec(N))

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'web_site.apps.WebSiteConfig',
     'celery_app.apps.CeleryAppConfig',
+    'channels',
 
     'rest_framework',
     'django_celery_beat',
@@ -77,6 +78,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'easy_work.wsgi.application'
+ASGI_APPLICATION = 'easy_work.asgi.application'
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

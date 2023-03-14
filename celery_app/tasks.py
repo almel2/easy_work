@@ -4,11 +4,16 @@ import random
 
 from django.contrib.auth import get_user_model
 
+from api.serializers import VacancySerializer
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "easy_work.settings")
 
 from celery import shared_task
 from parser_job_websites.all_parsers import AllParserForUser
 from web_site.models import VacancyModel, SiteModel, CityModel
+
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
 
 base_dir = os.path.dirname(__file__)
 
@@ -21,13 +26,14 @@ def test_work_beat():
 
 
 def add_new_data_in_bd(user_id):
+    vac_list = []
     with open(os.path.join(base_dir, 'vacancy_dict.json')) as file:
         data = file.read()
 
     site, created = SiteModel.objects.get_or_create(site='Easy Work')
     city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
-    print(site)
-    VacancyModel.objects.create(
+
+    fake_vac = VacancyModel.objects.create(
         user=User.objects.get(pk=user_id),
         title='Title number - ' + str(random.randint(1, 100)),
         url='#',
@@ -35,6 +41,7 @@ def add_new_data_in_bd(user_id):
         date='Here should be date',
         site=site,
     )
+    vac_list.append(fake_vac)
 
     for item in json.loads(data):
         site, create = SiteModel.objects.get_or_create(site=item['site'])
@@ -51,7 +58,7 @@ def add_new_data_in_bd(user_id):
                 defaults={'url': item['url'], 'date': item['date']}
             )
 
-        VacancyModel.objects.update_or_create(
+        vacancy_obj = VacancyModel.objects.update_or_create(
             user=User.objects.get(pk=user_id),
             title=item['title'],
             url=item['url'],
@@ -60,6 +67,19 @@ def add_new_data_in_bd(user_id):
 
             defaults={'date': item['date']}
         )
+        vac_list.append(vacancy_obj)
+
+
+    channel_layer = get_channel_layer()
+
+    serializer = VacancySerializer(vac_list, many=True).data
+    async_to_sync(channel_layer.group_send)(
+        'vacancy_updates',
+        {
+            'type': 'vacancy_update',
+            'payload': serializer,
+        }
+    )
 
 
 @shared_task

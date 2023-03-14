@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Vacancies list
+{% endblock %}
+
+{% block content %}
+<h1>Vacancies List</h1>
+<ul id="vacancies-list">
+    {% for vacancy in vacancies %}
+        <li>{{ vacancy.title }} - {{ vacancy.city.city }} - {{ vacancy.date }}</li>
+    {% endfor %}
+</ul>
+
+<script>
+
+function connect() {
+    socket = new WebSocket('ws://' + window.location.host);
+
+
+    socket.onopen = function (e) {
+        console.log("Successfully connected to the WebSocket.");
+    }
+
+
+    socket.onmessage = function (e) {
+        var vacancies = JSON.parse(e.data)
+        console.log(vacancies)
+        var vacancyList = document.getElementById('vacancies-list')
+        vacancyList.innerHTML = '';
+        vacancies.forEach(function (vacancy) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = vacancy.url;
+            a.textContent = vacancy.title;
+            li.appendChild(a);
+            vacancyList.appendChild(li);
+        })
+    }
+
+    socket.onerror = function (e) {
+        console.log("error", e)
+    }
+
+    socket.onclose = function (e) {
+        console.log("WebSocket connection closed unexpectedly. Trying to reconnect in 2s...");
+        setTimeout(function (){
+            console.log("Reconnecting...");
+            connect()
+        }, 2000)
+    }
+}
+connect();
+
+
+</script>
+{% endblock %}

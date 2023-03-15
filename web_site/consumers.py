@@ -18,7 +18,6 @@ class AllVacanciesConsumer(AsyncWebsocketConsumer):
         await self.channel_layer.group_add('vacancy_updates', self.channel_name)
 
         vacancies = await self.get_all_vacancies()
-        print('work all vac !!!!!!!!!!!!--------------------')
         await self.send(text_data=json.dumps(vacancies))
 
     @database_sync_to_async
@@ -28,7 +27,6 @@ class AllVacanciesConsumer(AsyncWebsocketConsumer):
         return serializer
 
     async def vacancy_update(self, event):
-        print('------------------------work consumer !!!!!')
         await self.send(text_data=json.dumps(event['payload']))
 
         vacancies = await self.get_all_vacancies()

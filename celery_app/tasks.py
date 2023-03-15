@@ -58,7 +58,7 @@ def add_new_data_in_bd(user_id):
                 defaults={'url': item['url'], 'date': item['date']}
             )
 
-        vacancy_obj = VacancyModel.objects.update_or_create(
+        vacancy_obj, update = VacancyModel.objects.update_or_create(
             user=User.objects.get(pk=user_id),
             title=item['title'],
             url=item['url'],
@@ -67,7 +67,8 @@ def add_new_data_in_bd(user_id):
 
             defaults={'date': item['date']}
         )
-        vac_list.append(vacancy_obj)
+        if update:
+            vac_list.append(vacancy_obj)
 
 
     channel_layer = get_channel_layer()

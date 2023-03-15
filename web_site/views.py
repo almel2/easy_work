@@ -19,7 +19,7 @@ def index(request):
 class VacanciesList(ListView):
     model = VacancyModel
     context_object_name = 'vacancies'
-    template_name = 'web_site/vacancies_list.html'
+    template_name = 'web_site/websocket_vacancies_list.html'
     ordering = ('-create_date', )
 
 

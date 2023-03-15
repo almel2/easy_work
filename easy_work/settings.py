@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-*f_m5n!8rn#5(1lob!(i+d4+_n^4&q-a@szw8gj2xi#(r*k+yb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'web_site.apps.WebSiteConfig',
     'celery_app.apps.CeleryAppConfig',
+    'channels',
 
     'rest_framework',
     'django_celery_beat',
@@ -77,6 +78,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'easy_work.wsgi.application'
+ASGI_APPLICATION = 'easy_work.asgi.application'
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -162,3 +165,15 @@ CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGINS = [
 #     'http://localhost:3030',
 # ]
+
+#  Channels redis
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
+

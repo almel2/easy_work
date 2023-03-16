@@ -1,25 +1,32 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
     Vacancies list
 {% endblock %}
 
 {% block content %}
 <h1>Vacancies List</h1>
+<h2>{{ window.location.host }}</h2>
 <ul id="vacancies-list">
     {% for vacancy in vacancies %}
         <li>{{ vacancy.title }} - {{ vacancy.city.city }} - {{ vacancy.date }}</li>
     {% endfor %}
 </ul>
 
+<audio id="ringtone" src="{% static 'ringtone/bell.wav' %}"></audio>
+
 <script>
+var ringtone = document.getElementById("ringtone");
+
 
 function connect() {
     socket = new WebSocket('ws://' + window.location.host);
 
 
     socket.onopen = function (e) {
-        console.log("Successfully connected to the WebSocket.");
+        console.log("Successfully connected to the WebSocket.", window.location.host);
     }
 
 
@@ -36,6 +43,9 @@ function connect() {
             li.appendChild(a);
             vacancyList.appendChild(li);
         })
+
+        ringtone.play().catch(function (error) {
+            console.log("Chrome cannot play sound without user interaction first")});
     }
 
     socket.onerror = function (e) {

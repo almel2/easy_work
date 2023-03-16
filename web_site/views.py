@@ -23,6 +23,10 @@ class VacanciesList(ListView):
     ordering = ('-create_date', )
 
 
+class UserProfile:
+    pass
+
+
 class UserParserKeyword(LoginRequiredMixin, FormView):
     form_class = UserKeywordForm
     template_name = 'web_site/user_keyword.html'

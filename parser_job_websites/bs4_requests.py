@@ -11,6 +11,10 @@ headers = {
 }
 
 
+class RequestAndGetSoup:
+    pass
+
+
 def get_request_site_soup(url):
     counter = 0
     try:
@@ -73,3 +77,19 @@ def validation_data(title, url, city, date, site, keyword='python', user_city=('
                 }
             )
             write_in_file(dict_data)
+
+
+class Validation:
+    pass
+
+
+class ValidationUserKeyword:
+    pass
+
+
+class ValidationDataFromParser:
+    pass
+
+
+class ValidationTitleFromVacancy:
+    pass

@@ -31,16 +31,25 @@ function connect() {
 
 
     socket.onmessage = function (e) {
-        var vacancies = JSON.parse(e.data)
+        let vacancies = JSON.parse(e.data)
         console.log(vacancies)
-        var vacancyList = document.getElementById('vacancies-list')
+        let vacancyList = document.getElementById('vacancies-list')
         vacancyList.innerHTML = '';
         vacancies.forEach(function (vacancy) {
-            var li = document.createElement("li");
-            var a = document.createElement("a");
+            let li = document.createElement('li');
+            let a = document.createElement('a');
+            let h2 = document.createElement('h2')
+            let div = document.createElement('div')
+            let p = document.createElement('p')
+            h2.innerHTML = vacancy.title;
             a.href = vacancy.url;
-            a.textContent = vacancy.title;
+            a.textContent = 'Url - ' + vacancy.url;
+            a.target = '_blank';
+            div.textContent = 'Data - ' + vacancy.date;
+
+            li.appendChild(h2);
             li.appendChild(a);
+            li.appendChild(div);
             vacancyList.appendChild(li);
         })
 

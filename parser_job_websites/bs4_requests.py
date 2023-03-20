@@ -35,7 +35,7 @@ def write_in_file(data_dict):
 
 
 def validation_title_on_keywords(title):
-    keywords = ('python', 'back', 'front', 'django', 'react', 'script')
+    keywords = ('python', 'back', 'django')
 
     for item in keywords:
         if item.lower() in title.lower():

@@ -30,18 +30,18 @@ def add_new_data_in_bd(user_id):
     with open(os.path.join(base_dir, 'vacancy_dict.json')) as file:
         data = file.read()
 
-    site, created = SiteModel.objects.get_or_create(site='Easy Work')
-    city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
-
-    fake_vac = VacancyModel.objects.create(
-        user=User.objects.get(pk=user_id),
-        title='Title number - ' + str(random.randint(1, 100)),
-        url='#',
-        city=city,
-        date='Here should be date',
-        site=site,
-    )
-    vac_list.append(fake_vac)
+    # site, created = SiteModel.objects.get_or_create(site='Easy Work')
+    # city, created = CityModel.objects.get_or_create(city='Kharkiv / Южний')
+    #
+    # fake_vac = VacancyModel.objects.create(
+    #     user=User.objects.get(pk=user_id),
+    #     title='Title number - ' + str(random.randint(1, 100)),
+    #     url='#',
+    #     city=city,
+    #     date='Here should be date',
+    #     site=site,
+    # )
+    # vac_list.append(fake_vac)
 
     for item in json.loads(data):
         site, create = SiteModel.objects.get_or_create(site=item['site'])
@@ -70,16 +70,16 @@ def add_new_data_in_bd(user_id):
             vac_list.append(vacancy_obj)
 
 
-    channel_layer = get_channel_layer()
-
-    serializer = VacancySerializer(vac_list, many=True).data
-    async_to_sync(channel_layer.group_send)(
-        'vacancy_updates',
-        {
-            'type': 'vacancy_update',
-            'payload': serializer,
-        }
-    )
+    if vac_list:
+        channel_layer = get_channel_layer()
+        serializer = VacancySerializer(vac_list, many=True).data
+        async_to_sync(channel_layer.group_send)(
+            'vacancy_updates',
+            {
+                'type': 'vacancy_update',
+                'payload': serializer,
+            }
+        )
 
 
 @shared_task

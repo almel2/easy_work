@@ -48,7 +48,7 @@ def add_new_data_in_bd(user_id):
         city, create = CityModel.objects.get_or_create(city=item['city'])
 
         if site.site == 'Linkedin':
-            VacancyModel.objects.update_or_create(
+            vacancy_obj, update = VacancyModel.objects.update_or_create(
                 user=User.objects.get(pk=user_id),
                 title=item['title'],
                 city=city,
@@ -56,6 +56,9 @@ def add_new_data_in_bd(user_id):
 
                 defaults={'url': item['url'], 'date': item['date']}
             )
+            if update:
+                vac_list.append(vacancy_obj)
+
 
         vacancy_obj, update = VacancyModel.objects.update_or_create(
             user=User.objects.get(pk=user_id),

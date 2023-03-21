@@ -48,7 +48,7 @@ def validation_data(title, url, city, date, site, keyword='python', user_city=('
     words_ignore = ('middle', 'mid', 'senior', 'data', 'vision',
                     'machine', 'full', 'mentor', 'commod', 'fullstack',
                     'cybersecurity', 'applied', 'solutions', 'lead',
-                    'Викладач', 'Вчитель', 'QA')
+                    'Викладач', 'Вчитель', 'QA', 'PHP')
 
     if title is None:
         title = 'None'

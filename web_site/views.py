@@ -13,7 +13,7 @@ from web_site.models import VacancyModel
 from django_celery_beat.models import PeriodicTask, IntervalSchedule
 
 def index(request):
-    return HttpResponse('Hello web site')
+    return render(request, 'web_site/index.html')
 
 
 class VacanciesList(ListView):

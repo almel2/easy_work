@@ -9,7 +9,7 @@ from accounts.forms import CastomUserForm
 class Register(FormView):
     form_class = CastomUserForm
     template_name = 'registration/registration.html'
-    success_url = reverse_lazy('vacancies_list')
+    success_url = reverse_lazy('user_keyword_celery')
 
     def form_valid(self, form):
         user = form.save()

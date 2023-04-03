@@ -40,7 +40,7 @@ class Validation:
 
     @staticmethod
     def validation_title_on_keywords(title, keywords):
-        for item in keywords:
+        for item in keywords.split():
             if item.lower() in title.lower():
                 return True
         return False

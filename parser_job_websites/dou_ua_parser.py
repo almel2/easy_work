@@ -1,4 +1,4 @@
-from parser_job_websites.bs4_requests import get_request_site_soup, validation_data
+from parser_job_websites.core_parser import get_request_site_soup, validation_data
 
 
 def dou_ua_parser(url='https://jobs.dou.ua/vacancies/?remote&search=python%20'):

@@ -1,4 +1,4 @@
-from parser_job_websites.bs4_requests import get_request_site_soup, validation_title_on_keywords
+from parser_job_websites.core_parser import get_request_site_soup, validation_title_on_keywords
 
 
 

@@ -1,4 +1,4 @@
-from parser_job_websites.bs4_requests import get_request_site_soup
+from parser_job_websites.core_parser import get_request_site_soup
 
 
 def work_ua_parser(url='https://www.work.ua/jobs-python/?days=122'):

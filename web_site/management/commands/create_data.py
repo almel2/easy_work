@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
 import os.path
 
-from web_site.models import VacancyModel, CityModel,  SiteModel
+from web_site.models import VacancyModel, CityModel, SiteModel, UserProfileModel
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
@@ -16,11 +16,15 @@ class Command(BaseCommand):
     help = 'This command create data'
 
     def handle(self, *args, **options):
+        user = User.objects.get(pk=1)
+        print(user)
+        user_profile, create = UserProfileModel.objects.update_or_create(user=user)
+        print(user_profile, 'prof')
         site, create = SiteModel.objects.update_or_create(site='Site foo')
         city, create = CityModel.objects.update_or_create(city='City foo')
 
         VacancyModel.objects.update_or_create(
-                user=User.objects.get(pk=1),
+                user=user_profile,
                 title='title1',
                 url='url1',
                 city=city,

@@ -15,10 +15,10 @@ class AllParserForUser(Validation):
         all_vacancies = soup.find('div', {'class': 'row'}).findAll('li', {'class': 'list-jobs__item'})
         site = 'Djinni.co'
         for item in all_vacancies:
-            title = item.find('a', {'class': 'profile'}).text.strip()
-            url = 'https://djinni.co' + item.find('a', {'class': 'profile'}).get('href')
+            title = item.find('a', {'class': 'h3 job-list-item__link'}).text.strip()
+            url = 'https://djinni.co' + item.find('a', {'class': 'h3 job-list-item__link'}).get('href')
             city = item.find('span', {'class': 'location-text'}).text.strip()
-            date = item.find('div', {'class': 'text-date'}).text.strip().split()[0]
+            date = item.find('span', {'class': 'mr-2 nobr'}).get('title')
 
             self.add_to_valid_data(site, title, url, city, date, self.keyword, self.words_ignore)
 

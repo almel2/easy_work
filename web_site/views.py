@@ -1,14 +1,14 @@
 import json
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.utils import timezone
-from django.views.generic import ListView, FormView
+from django.views.generic import ListView, FormView, DetailView, TemplateView
 
 from celery_app.tasks import user_parser_for_keyword
-from web_site.forms import UserKeywordForm
-from web_site.models import VacancyModel
+from web_site.forms import UserKeywordForm, KeywordForm, WordIgnoreForm
+from web_site.models import VacancyModel, UserProfileModel
 
 from django_celery_beat.models import PeriodicTask, IntervalSchedule
 
@@ -24,9 +24,35 @@ class VacanciesList(ListView):
     ordering = ('-create_date',)
 
 
-class UserProfile:
-    pass
 
+
+
+class UserProfile(TemplateView):
+    template_name = 'web_site/profile.html'
+
+    def get(self,request, *args, **kwargs):
+        profile = UserProfileModel.objects.get(pk=request.user.id)
+        keyword_form = KeywordForm()
+        words_ignore = WordIgnoreForm()
+        return self.render_to_response({'profile': profile, 'keyword_form': keyword_form, 'words_ignore': words_ignore})
+
+    def post(self, request, *args, **kwargs):
+        keyword_form = KeywordForm(
+            request.POST, prefix='keyword'
+        )
+        words_ignore = WordIgnoreForm(
+            request.POST, prefix='word_ignore'
+        )
+        if keyword_form.is_valid():
+            keyword_form.save()
+            return HttpResponseRedirect(reverse_lazy('profile'))
+        if words_ignore.is_valid():
+            words_ignore.save()
+            return HttpResponseRedirect(reverse_lazy('profile'))
+
+        return self.render_to_response(
+            self.get_context_data(keyword_form=keyword_form, words_ignore=words_ignore)
+        )
 
 class UserParserKeyword(LoginRequiredMixin, FormView):
     form_class = UserKeywordForm

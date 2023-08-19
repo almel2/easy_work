@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+    <h1>Profile</h1>
+    keywords = {{ profile.keywords }}
+
+    
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ keyword_form.as_p }}
+    <button type="submit">form 1</button>
+    </form>
+
+    <p>-----------------------------------</p>
+
+    words_ignore = {{ profile.words_ignore }}
+
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ words_ignore.as_p }}
+    <button type="submit">form 2</button>
+    </form>
+{% endblock %}
